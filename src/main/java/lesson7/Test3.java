@@ -12,7 +12,7 @@ public class Test3 {
     }
 
     private static double getDouble(Scanner scanner) {
-        while (!scanner.hasNextDouble()) {
+        while (!scanner.hasNextDouble()) {//обязательно parseDouble использовать?
             System.out.println("wrong type:");
             scanner.next();
         }
@@ -30,7 +30,7 @@ public class Test3 {
 
         System.out.println("c:");
         double c = getDouble(scanner);
-        
+
         System.out.println("min: " + getMin(a, b, c));
     }
 }
