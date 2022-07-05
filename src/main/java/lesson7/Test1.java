@@ -29,4 +29,3 @@ public class Test1 {
         System.out.println("min is " + min);
     }
 }
-//Вот если честно, wtf? Это так должно работать?Мне кажется нет
