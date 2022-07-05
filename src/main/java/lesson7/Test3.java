@@ -8,28 +8,14 @@ public class Test3 {
     private static double getMin(double a, double b, double c) {
 
         return Math.abs(a) < Math.abs(b) ? (Math.abs(a) < Math.abs(c) ? a : c) : (Math.abs(b) < Math.abs(c) ? b : c);
-                                        //(                 1               )     (                 2              )
-    }
 
-    private static double getDouble(Scanner scanner) {
-        while (!scanner.hasNextDouble()) {//обязательно parseDouble использовать?
-            System.out.println("wrong type:");
-            scanner.next();
-        }
-        return scanner.nextDouble();
     }
-
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        System.out.println(" arg 1 =" + args[0] + " arg 2 =" + args[1] + " arg 3 =" + args[2]);
 
-        System.out.println("a:");
-        double a = getDouble(scanner);
-
-        System.out.println("b:");
-        double b = getDouble(scanner);
-
-        System.out.println("c:");
-        double c = getDouble(scanner);
+        double a = Double.parseDouble(args[0]);
+        double b = Double.parseDouble(args[1]);
+        double c = Double.parseDouble(args[2]);
 
         System.out.println("min: " + getMin(a, b, c));
     }

@@ -18,18 +18,21 @@ public class Test2 {
     static void blink(int l) {
 
         l = ~2;
+        System.out.println(Integer.toBinaryString(l));
 
     }
 
     static void run(int l) {
 
         l = l << 2;
+        System.out.println(Integer.toBinaryString(l));
 
     }
 
     static void mask(int l) {
 
         l = l & 1;
+        System.out.println(Integer.toBinaryString(l));
 
     }
 
