@@ -14,23 +14,26 @@ public class Task5 {
                 {2, 4, 1, 6, 4, 6, 5, 1},
                 {1, 32, 5, 63, 7, 3, 2, 24},
         };
+
         //штука сотрирует элементы массива
-        int i = 0;
+        int a = 0;
         do {
-            Arrays.sort(array[i]);
-            i= i + 1;
-        } while (i < 5);
+            Arrays.sort(array[a]);
+            a = a + 1;
+        } while (a < 5);
 
-        int[][] minMaxArrayElement = {
-                {0, 0},
-                {0, 0},
-                {0, 0},
-                {0, 0},
-                {0, 0},
-        };
+        int[][] minMaxArrayElement = new int[5][2];
+        for (int i = 0; i < array.length; i++) {
+            int min = array[i][0];
+            int max = array[i][0];
+            for (int j = 1; j < array[i].length; j++) {
+                if (max < array[i][j]) max = array[i][j];
+                if (min > array[i][j]) min = array[i][j];
+            }
+            minMaxArrayElement[i][1] = min;
+            minMaxArrayElement[i][0] = max;
+        }
 
-//по идее, я хотел просто копирвоать первую и последнюю цифру после сортировки элемента, но жизнь оказалась суровее и я в тупике
-            System.arraycopy(array[0], 0, minMaxArrayElement[0], 0, minMaxArrayElement[0].length);
 
         System.out.println((Arrays.deepToString(array)) + '\n' + Arrays.deepToString(minMaxArrayElement));
 

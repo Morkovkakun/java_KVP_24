@@ -16,9 +16,9 @@ public class Test2 {
     }
 
     static void blink(int l) {
-
-        l = ~2;
-        System.out.println(Integer.toBinaryString(l));
+int bl;
+        bl = ~l;
+        System.out.println(Integer.toBinaryString(bl));
 
     }
 
