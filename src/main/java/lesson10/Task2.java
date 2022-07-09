@@ -7,7 +7,7 @@ public class Task2 {
 
     public static void main(String[] args) {
 
-        int[] array1 = new int[]{0, 2, 5, 3};
+        int[] array1 = new int[]{0, 2, 5, 3, 4};
         sort(array1);
     }
 
@@ -22,15 +22,15 @@ public class Task2 {
 
             for (int j = number ; j > i; j--) {
 
-                String doOrNot = "-";
-
+                String doOrNot = "+";
+                
                 if (array[j - 1] < array[j]) {
                     int tmp = array[j - 1];
                     array[j - 1] = array[j];
                     array[j] = tmp;
-                    doOrNot = (tmp == array[j - 1]) ? "" : "+";
+                    doOrNot = (array[j] >= array[j - 1]) ? "" : "-";
                 }
-                System.out.println(i + " " + j + "   " + Arrays.toString(array) + "                " + doOrNot);
+                System.out.println(i + " " + j + "   " + Arrays.toString(array) + "              " + doOrNot);
             }
         }
     }
