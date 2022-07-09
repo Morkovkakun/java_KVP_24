@@ -22,16 +22,18 @@ public class Task4 {
 
             for (int j = i + 1; j < array.length; j++) {
 
+
                 if (array[j] < min) {
                     pos = j;
                     min = array[j];
                 }
             }
-
-            //исключение, как я понял делается через индекс массива, но реализовать не смог
-
+            if (array[pos] != array[i]) {
                 array[pos] = array[i];
                 array[i] = min;
+            }
+
+
 
             String doOrNot = (min == array[pos]) ? "-" : "+";
             System.out.println(pos + "  " + min + "   " + Arrays.toString(array) + "                " + doOrNot);
